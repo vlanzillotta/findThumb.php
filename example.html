@@ -1,0 +1,35 @@
+
+
+<table>
+    <tr>
+        
+    <td>
+        <input type="text" id="article_url">
+        <br />
+        <input type="button" onClick="populate_image();" value="look up thumbnail">
+    </td>
+    </tr>
+    <tr>
+        <td>
+
+            <img id="testimage" src="" />
+        </td>
+
+    </tr>
+</table>
+
+
+
+
+
+<script>
+    
+function populate_image() {
+    var url = document.getElementById("article_url");
+    var image = document.getElementById("testimage");
+    
+    image.src = "http://www.media.objectivev.com/findThumb.php?url=" + encodeURIComponent(url.value);
+
+}
+
+</script>
