@@ -1,4 +1,16 @@
 
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<h1>findThumb.php example</h1>
+<h2>Served on <a href="http://media.objectivev.com">media.objectivev.com</a></h2>
 
 <table>
     <tr>
@@ -6,14 +18,13 @@
     <td>
         <input type="text" id="article_url">
         <br />
-        <input type="button" onClick="populate_image();" value="look up thumbnail">
+        <button class="btn btn-default" type="button" onclick="populate_image()">look up thumbnail</button>
     </td>
-    </tr>
-    <tr>
-        <td>
 
-            <img id="testimage" src="" />
-        </td>
+    <td>
+
+        <img style="width:200px;height:200px;border:1px solid grey;" id="testimage" src="" />
+    </td>
 
     </tr>
 </table>
@@ -27,7 +38,6 @@
 function populate_image() {
     var url = document.getElementById("article_url");
     var image = document.getElementById("testimage");
-    
     image.src = "http://www.media.objectivev.com/findThumb.php?url=" + encodeURIComponent(url.value);
 
 }
